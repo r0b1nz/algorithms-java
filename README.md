@@ -1,6 +1,9 @@
 # algorithms-java
 Implementing algorithms in Java - A playground
 
+## Goal
+To implement set of algorithms each week
+
 ## Algorithms
 ### Arrays
 #### Sorting
