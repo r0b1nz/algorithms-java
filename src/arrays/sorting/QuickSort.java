@@ -8,7 +8,7 @@ import java.util.Random;
  *
  * @author Robin Gautam (robin.gautam341@gmail.com)
  */
-public class QuickSort {
+public class QuickSort implements SortAlgorithm {
     private ArrayList<Integer> array = new ArrayList<>();
 
     public QuickSort() {
@@ -18,6 +18,7 @@ public class QuickSort {
         }
     }
 
+    @Override
     public boolean test() {
         sort(0, array.size() - 1);
         ArrayList<Integer> testList = new ArrayList<>(array);
