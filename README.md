@@ -7,4 +7,4 @@ To implement set of algorithms each week
 ## Algorithms
 ### Arrays
 #### Sorting
-1. Quick sort - `src.arrays.sorting.QuickSort`
+1. Quick sort - `src.QuickSort`

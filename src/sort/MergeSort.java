@@ -1,7 +1,8 @@
-package arrays.sorting;
+package sort;
+
+import algorithm.Algorithm;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -10,7 +11,7 @@ import java.util.Random;
  *
  * @author Robin Gautam (robin.gautam341@gmail.com)
  */
-public class MergeSort implements SortAlgorithm {
+public class MergeSort implements Algorithm {
     private ArrayList<Integer> array = new ArrayList<>();
 
     public MergeSort() {
@@ -93,26 +94,5 @@ public class MergeSort implements SortAlgorithm {
         List<Integer> firstHalf = sort(startIndex, halfIndex);
         List<Integer> secondHalf = sort(halfIndex + 1, endIndex);
         return merge(firstHalf, secondHalf);
-    }
-
-    /**
-     * Swap the elements
-     */
-    private void swap(int index1, int index2) {
-        int value = array.get(index1);
-        array.set(index1, array.get(index2));
-        array.set(index2, value);
-    }
-
-    /**
-     * Instantiate and test the logic
-     */
-    public static void main(String[] args) {
-        MergeSort mergeSort = new MergeSort();
-        if (mergeSort.test()) {
-            System.out.println("Passed");
-        } else {
-            System.out.println("Failed");
-        }
     }
 }

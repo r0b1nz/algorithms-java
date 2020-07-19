@@ -1,4 +1,6 @@
-package arrays.sorting;
+package sort;
+
+import algorithm.Algorithm;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -8,7 +10,7 @@ import java.util.Random;
  *
  * @author Robin Gautam (robin.gautam341@gmail.com)
  */
-public class QuickSort implements SortAlgorithm {
+public class QuickSort implements Algorithm {
     private ArrayList<Integer> array = new ArrayList<>();
 
     public QuickSort() {
@@ -79,17 +81,5 @@ public class QuickSort implements SortAlgorithm {
         int value = array.get(index1);
         array.set(index1, array.get(index2));
         array.set(index2, value);
-    }
-
-    /**
-     * Instantiate and test the logic
-     */
-    public static void main(String[] args) {
-        QuickSort quickSort = new QuickSort();
-        if (quickSort.test()) {
-            System.out.println("Passed");
-        } else {
-            System.out.println("Failed");
-        }
     }
 }
