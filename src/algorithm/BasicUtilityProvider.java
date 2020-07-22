@@ -1,6 +1,7 @@
 package algorithm;
 
 import java.util.List;
+import java.util.Random;
 
 public final class BasicUtilityProvider {
 
@@ -9,8 +10,9 @@ public final class BasicUtilityProvider {
     }
 
     public static class Utilities {
+        private Random random;
         private Utilities() {
-
+            random = new Random();
         }
 
         /**
@@ -20,6 +22,10 @@ public final class BasicUtilityProvider {
             Object value = array.get(index1);
             array.set(index1, array.get(index2));
             array.set(index2, value);
+        }
+
+        public int getRandomInt(int bound) {
+            return random.nextInt(bound);
         }
     }
 }

@@ -3,6 +3,7 @@ package verifier;
 import algorithm.Algorithm;
 
 import java.lang.invoke.MethodHandles;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -55,7 +56,7 @@ public abstract class AlgorithmVerifierBase {
     }
 
     private void printResults(Set<Algorithm> passed, Set<Algorithm> failed) {
-        System.out.println("For " + MethodHandles.lookup().lookupClass().getName());
+        System.out.println("For " + getName());
         System.out.println("Success: " + passed.size() + "/" + (passed.size() + failed.size()));
         System.out.println("Algorithms passed: " + passed);
         System.out.println("Algorithms Failed: " + failed);
