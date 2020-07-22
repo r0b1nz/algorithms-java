@@ -5,6 +5,7 @@ import algorithm.Algorithm;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.function.Supplier;
 
 /**
  * Class implementing the quick sort logic
@@ -34,7 +35,10 @@ public class MergeSort implements Algorithm {
                 return 0;
             }
         });
-        return testList.equals(sortedList);
+
+        List<Supplier<Boolean>> tests = new ArrayList<>();
+        tests.add(() -> testList.equals(sortedList));
+        return runAssertions(tests);
     }
 
     /*

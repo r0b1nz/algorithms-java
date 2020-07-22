@@ -3,7 +3,9 @@ package sort;
 import algorithm.Algorithm;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
+import java.util.function.Supplier;
 
 /**
  * Class implementing the quick sort logic
@@ -33,7 +35,10 @@ public class QuickSort implements Algorithm {
                 return 0;
             }
         });
-        return testList.equals(array);
+
+        List<Supplier<Boolean>> tests = new ArrayList<>();
+        tests.add(() -> testList.equals(array));
+        return runAssertions(tests);
     }
 
     /**

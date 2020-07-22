@@ -3,6 +3,11 @@ package algorithm;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * Utilities provider
+ *
+ * @author Robin Gautam (robin.gautam341@gmail.com)
+ */
 public final class BasicUtilityProvider {
 
     public static Utilities getUtilities() {

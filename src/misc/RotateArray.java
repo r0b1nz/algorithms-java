@@ -6,6 +6,11 @@ import algorithm.BasicUtilityProvider;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Implement Array Rotation Algorithm
+ *
+ * @author Robin Gautam (robin.gautam341@gmail.com)
+ */
 public class RotateArray implements Algorithm {
     private BasicUtilityProvider.Utilities utilities;
 

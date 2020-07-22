@@ -7,6 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
+/**
+ * Implement Binary Search algorithm
+ *
+ * @author Robin Gautam (robin.gautam341@gmail.com)
+ */
 public class BinarySearch implements Algorithm {
     private BasicUtilityProvider.Utilities utilities;
 

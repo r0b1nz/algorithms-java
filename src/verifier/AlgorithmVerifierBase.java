@@ -2,8 +2,6 @@ package verifier;
 
 import algorithm.Algorithm;
 
-import java.lang.invoke.MethodHandles;
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -11,6 +9,9 @@ import java.util.Set;
  * Test Verifier Base Class
  */
 public abstract class AlgorithmVerifierBase {
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_GREEN = "\u001B[32m";
 
     /**
      * Setup algorithms
@@ -58,8 +59,8 @@ public abstract class AlgorithmVerifierBase {
     private void printResults(Set<Algorithm> passed, Set<Algorithm> failed) {
         System.out.println("For " + getName());
         System.out.println("Success: " + passed.size() + "/" + (passed.size() + failed.size()));
-        System.out.println("Algorithms passed: " + passed);
-        System.out.println("Algorithms Failed: " + failed);
+        System.out.println(ANSI_GREEN + "Algorithms passed: " + passed + ANSI_RESET);
+        System.out.println(ANSI_RED + "Algorithms Failed: " + failed + ANSI_RESET);
     }
 
     private void printHeader() {

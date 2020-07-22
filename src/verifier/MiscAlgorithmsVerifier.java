@@ -4,6 +4,11 @@ import misc.BinarySearch;
 import misc.GCD;
 import misc.RotateArray;
 
+/**
+ * Miscellaneous algorithms verifier
+ *
+ * @author Robin Gautam (robin.gautam341@gmail.com)
+ */
 public class MiscAlgorithmsVerifier extends AlgorithmVerifierBase implements AlgorithmVerifier {
     @Override
     String getName() {

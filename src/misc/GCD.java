@@ -3,12 +3,20 @@ package misc;
 import algorithm.Algorithm;
 import javafx.util.Pair;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.function.Supplier;
 
 import static java.lang.Math.abs;
 import static java.lang.Math.min;
 
+/**
+ * Implement Greatest common divisor's algorithm
+ *
+ * @author Robin Gautam (robin.gautam341@gmail.com)
+ */
 public class GCD implements Algorithm {
     private Map<Pair<Integer, Integer>, Integer> numberToGCDMap;
 
@@ -26,17 +34,14 @@ public class GCD implements Algorithm {
 
     @Override
     public boolean test() {
-        int failedCases = 0;
+        List<Supplier<Boolean>> tests = new ArrayList<>();
         for (var numberAndGCD : numberToGCDMap.entrySet()) {
             int firstNumber = numberAndGCD.getKey().getKey();
             int secondNumber = numberAndGCD.getKey().getValue();
             int gcd = numberAndGCD.getValue();
-            if (findGCD(firstNumber, secondNumber) != gcd) {
-                failedCases++;
-            }
+            tests.add(() -> findGCD(firstNumber, secondNumber) == gcd);
         }
-        System.out.println("Successful cases: " + (numberToGCDMap.size() - failedCases) + "/" + numberToGCDMap.size());
-        return failedCases == 0;
+        return runAssertions(tests);
     }
 
     public static int findGCD(int firstNumber, int secondNumber) {
